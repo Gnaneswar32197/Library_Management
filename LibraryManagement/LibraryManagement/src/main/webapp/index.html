@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            overflow: hidden; /* Prevent scroll */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #FFD700;
+            box-shadow: 0 0 10px white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px white;
+            animation: sparkle 0.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                text-shadow: 0 0 5px #FFD700;
+            }
+            50% {
+                text-shadow: 0 0 15px #FFD700, 0 0 25px white;
+            }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #8B4513;
+        }
+
+        .library-name {
+            position: absolute;
+            top: 180px;
+            left: 250px;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #FFD700;
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo" onclick="window.location.href='welcome.html'">GK</div>
+
+    <!-- Library Name -->
+    <div class="library-name">GK'S Online Library</div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Admin/User</a></li> <!-- Redirect to login.html -->
+        </ul>
+    </div>
+
+</body>
+</html>

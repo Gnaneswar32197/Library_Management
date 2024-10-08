@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Issue Books</title>
+<style>
+    body {
+        background-image: url('images/Li2.jpg'); /* Background image */
+        background-size: cover;
+        background-position: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Glassy black form */
+    .form-container {
+        background-color: rgba(0, 0, 0, 0.7); /* Glassy effect */
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 0 15px white; /* White box shadow */
+        width: 400px;
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #FFD700; /* Gold color */
+        margin-bottom: 30px;
+    }
+
+    .form-container label {
+        color: white;
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="date"],
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Buttons */
+    .form-container input[type="submit"],
+    .form-container input[type="button"] {
+        width: 45%;
+        padding: 10px;
+        margin: 10px 5%;
+        background-color: #8B4513; /* Saddle Brown for consistency */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        font-family: 'Poppins', sans-serif;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-container input[type="submit"]:hover,
+    .form-container input[type="button"]:hover {
+        background-color: #CD5C5C; /* Indian Red on hover */
+    }
+</style>
+</head>
+<body>
+
+    <!-- Form with glassy black background -->
+    <div class="form-container">
+        <h2>Issue New Book</h2>
+        <form action="AddBookServlet" method="post">
+            <label for="issue bookName">Issue Book Name:</label>
+            <input type="text" id="bookName" name="bookName" required>
+
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" name="authorName" required>
+
+            <label for="Issue date">Issue Date:</label>
+            <input type="date" id="datePublished" name="datePublished" required>
+
+
+            <!-- Add and Back buttons -->
+            <input type="submit" value="ISSUE">
+            <input type="button" value="Back" onclick="location.href='admin.html'">
+        </form>
+    </div>
+
+</body>
+</html>

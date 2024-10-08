@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars on the main page */
+        }
+
+        .container {
+            padding: 20px;
+            overflow-y: auto; /* Allows vertical scrolling */
+            height: calc(100vh - 100px); /* Adjust height to accommodate the search bar */
+            display: flex;
+            flex-direction: column;
+            margin-left: 80px; /* Added margin to prevent overlap with nav bar */
+        }
+
+        /* Vertical navigation bar styling */
+        .nav-bar {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Spacing between icons */
+            z-index: 100; /* Ensures the nav bar stays above other elements */
+        }
+
+        .nav-icon {
+            width: 60px;
+            height: 60px;
+            background-color: black; /* Changed to black */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-icon:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Slightly visible on hover */
+            transform: scale(1.1);
+        }
+
+        .nav-icon img {
+            width: 30px;
+            height: 30px;
+            filter: invert(1); /* Inverts colors for white icons */
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .logout-button:hover {
+            background-color: #d32f2f;
+        }
+
+        .comic-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            justify-content: space-between;
+        }
+
+        .arrow-button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .comic-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            width: calc((100% / 9) - 10px);
+            height: 220px; /* Adjusted height for better visibility */
+            margin-left: 5px; /* Adjust margin to move boxes to the right */
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .comic-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .arrow-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Aligns the arrows and heading */
+            width: 100%; /* Ensures it takes the full width */
+        }
+
+        .row-heading {
+            flex-grow: 1; /* Allows the heading to take available space */
+            text-align: center; /* Center aligns the heading */
+        }
+    </style>
+</head>
+<body>
+    <!-- Vertical Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="nav-icon" onclick="window.location.href='welcome1.html';">
+            <img src="images/images.png" alt="Books">
+        </div>
+        <div class="nav-icon" onclick="window.location.href='borrow_page.html';">
+            <img src="images/b.png" alt="Borrow">
+        </div>
+        <div class="nav-icon" onclick="window.location.href='purchased_page.html';">
+            <img src="images/p.png" alt="Purchased">
+        </div>
+        <div class="nav-icon" onclick="window.location.href='returned_page.html';">
+            <img src="images/r.jpg" alt="Returned">
+        </div>
+    </nav>
+
+    <button class="logout-button" onclick="window.location.href='index.html';">Logout</button>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search for Books..." />
+    </div>
+
+    <div class="container">
+        <!-- Comic Rows Example -->
+        <div class="comic-row">
+            <div class="arrow-container">
+                <button class="arrow-button">&#10094;</button>
+                <div class="row-heading">Computer Science</div>
+                <div class="row-heading">Computer Science</div>
+            <button class="arrow-button" id="right-arrow" onclick="window.location.href='computer_science_page.html';">&#10095;</button>
+            </div>
+        </div>
+        <div class="comic-row">
+            <div class="comic-box">Comic Book 1</div>
+            <div class="comic-box">Comic Book 2</div>
+            <div class="comic-box">Comic Book 3</div>
+            <div class="comic-box">Comic Book 4</div>
+            <div class="comic-box">Comic Book 5</div>
+            <div class="comic-box">Comic Book 6</div>
+            <div class="comic-box">Comic Book 7</div>
+            <div class="comic-box">Comic Book 8</div>
+            <div class="comic-box">Comic Book 9</div>
+        </div>
+
+        <!-- Biology Row -->
+        <div class="comic-row">
+            <div class="arrow-container">
+                <button class="arrow-button">&#10094;</button>
+                <div class="row-heading">Biology</div>
+                <button class="arrow-button" onclick="window.location.href='biology_page.html';">&#10095;</button>
+            </div>
+        </div>
+        <div class="comic-row">
+            <div class="comic-box">Comic Book 10</div>
+            <div class="comic-box">Comic Book 11</div>
+            <div class="comic-box">Comic Book 12</div>
+            <div class="comic-box">Comic Book 13</div>
+            <div class="comic-box">Comic Book 14</div>
+            <div class="comic-box">Comic Book 15</div>
+            <div class="comic-box">Comic Book 16</div>
+            <div class="comic-box">Comic Book 17</div>
+            <div class="comic-box">Comic Book 18</div>
+        </div>
+
+        <!-- Chemistry Row -->
+        <div class="comic-row">
+            <div class="arrow-container">
+                <button class="arrow-button">&#10094;</button>
+                <div class="row-heading">Chemistry</div>
+                <button class="arrow-button" onclick="window.location.href='chemistry_page.html';">&#10095;</button>
+            </div>
+        </div>
+        <div class="comic-row">
+            <div class="comic-box">Comic Book 19</div>
+            <div class="comic-box">Comic Book 20</div>
+            <div class="comic-box">Comic Book 21</div>
+            <div class="comic-box">Comic Book 22</div>
+            <div class="comic-box">Comic Book 23</div>
+            <div class="comic-box">Comic Book 24</div>
+            <div class="comic-box">Comic Book 25</div>
+            <div class="comic-box">Comic Book 26</div>
+            <div class="comic-box">Comic Book 27</div>
+        </div>
+
+        <!-- Fantasy Row -->
+        <div class="comic-row">
+            <div class="arrow-container">
+                <button class="arrow-button">&#10094;</button>
+                <div class="row-heading">Fantasy</div>
+                <button class="arrow-button" onclick="window.location.href='fantasy_page.html';">&#10095;</button>
+            </div>
+        </div>
+        <div class="comic-row">
+            <div class="comic-box">Comic Book 28</div>
+            <div class="comic-box">Comic Book 29</div>
+            <div class="comic-box">Comic Book 30</div>
+            <div class="comic-box">Comic Book 31</div>
+            <div class="comic-box">Comic Book 32</div>
+            <div class="comic-box">Comic Book 33</div>
+            <div class="comic-box">Comic Book 34</div>
+            <div class="comic-box">Comic Book 35</div>
+            <div class="comic-box">Comic Book 36</div>
+        </div>
+    </div>
+</body>
+</html>

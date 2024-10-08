@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-top: 20%;
+            font-size: 36px;
+            color: #FFD700; /* Gold */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px; /* Padding around the text */
+            border-radius: 15px; /* Rounded corners */
+            backdrop-filter: blur(10px); /* Blur effect for the background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            width: 80%; /* Responsive width */
+            max-width: 600px; /* Max width */
+            margin: 20% auto; /* Center the block */
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #8B4513; /* Saddle Brown */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html">Admin/User</a></li>
+        </ul>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+        Welcome to the Home Page!
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Align items in a column */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin: 20px 0; /* Adjusted margin */
+            font-size: 24px; /* Decreased font size */
+            color: #FFD700; /* Gold */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px; /* Padding around the text */
+            border-radius: 15px; /* Rounded corners */
+            backdrop-filter: blur(10px); /* Blur effect for the background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            width: 80%; /* Responsive width */
+            max-width: 600px; /* Max width */
+            line-height: 1.4; /* Adjusted line height for better spacing */
+        }
+       
+        .navbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #8B4513; /* Saddle Brown */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px; /* Logo width */
+            height: 60px; /* Logo height */
+            background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+            border-radius: 50%; /* Circular logo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #FFD700; /* Gold glow */
+            box-shadow: 0 0 10px white; /* White box shadow */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+        }
+
+        .logo:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            box-shadow: 0 0 20px white; /* Stronger box shadow on hover */
+            animation: sparkle 0.5s infinite; /* Sparkle effect */
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                text-shadow: 0 0 5px #FFD700;
+            }
+            50% {
+                text-shadow: 0 0 15px #FFD700, 0 0 25px white; /* Sparkle effect */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">GK</a>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html">Admin/User</a></li>
+        </ul>
+    </div>
+
+    <!-- Welcome Message -->
+    <div class="welcome-message">
+        About Page!<br><br>
+        Our online library is dedicated to providing a vast collection of educational resources, including textbooks, research papers, and study guides. We aim to empower students and educators by offering easy access to valuable materials, fostering a community of learning and collaboration. Whether you are looking to expand your knowledge or support your academic journey, we have the resources you need. Thank you for being a part of our mission to promote education and knowledge sharing!
+    </div>
+</body>
+</html>

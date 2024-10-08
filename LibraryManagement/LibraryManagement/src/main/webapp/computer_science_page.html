@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrollbars on the main page */
+        }
+
+        .container {
+            padding: 20px;
+            overflow-y: auto; /* Allows vertical scrolling */
+            height: calc(100vh - 100px); /* Adjust height to accommodate the search bar */
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .comic-row {
+            display: flex;
+            align-items: center; /* Center align items vertically */
+            margin-bottom: 20px;
+            padding: 10px 0;
+            justify-content: space-between; /* Distribute space evenly */
+        }
+
+        .comic-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            width: calc((100% / 4) - 10px); /* Four boxes in a row */
+            height: 150px;
+            margin: 5px; /* Space between boxes */
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s; /* Smooth scaling */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .comic-box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for Books..." />
+    </div>
+
+    <div class="container">
+        <h1>Computer Science Books</h1>
+        <div class="comic-row">
+            <a class="comic-box" href="book1.html">Computer Science Book 1</a>
+            <a class="comic-box" href="book2.html">Computer Science Book 2</a>
+            <a class="comic-box" href="book3.html">Computer Science Book 3</a>
+            <a class="comic-box" href="book4.html">Computer Science Book 4</a>
+        </div>
+        <div class="comic-row">
+            <a class="comic-box" href="book5.html">Computer Science Book 5</a>
+            <a class="comic-box" href="book6.html">Computer Science Book 6</a>
+            <a class="comic-box" href="book7.html">Computer Science Book 7</a>
+            <a class="comic-box" href="book8.html">Computer Science Book 8</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <style>
+        body {
+            background-image: url('images/Li2.jpg'); /* Background image for Admin page */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Dashboard Menu on the left */
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Same navbar style */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #8B4513; /* Saddle Brown hover */
+        }
+
+        /* Navbar */
+        .navbar {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #8B4513; /* Saddle Brown */
+        }
+
+        /* Centered buttons */
+        .buttons-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .buttons-container input[type="button"] {
+            display: block;
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #8B4513; /* Saddle Brown for consistency */
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .buttons-container input[type="button"]:hover {
+            background-color: #CD5C5C; /* Indian Red on hover */
+        }
+
+        /* GK logo at the top left */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px; /* Logo width */
+            height: 60px; /* Logo height */
+            background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+            border-radius: 50%; /* Circular logo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px #FFD700; /* Gold glow */
+            box-shadow: 0 0 10px white; /* White box shadow */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+        }
+
+        .logo:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            box-shadow: 0 0 20px white; /* Stronger box shadow on hover */
+            animation: sparkle 0.5s infinite; /* Sparkle effect */
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                text-shadow: 0 0 5px #FFD700;
+            }
+            50% {
+                text-shadow: 0 0 15px #FFD700, 0 0 25px white; /* Sparkle effect */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- GK Logo with logout link -->
+    <a href="index.html" class="logo">GK</a>
+
+    <!-- Navbar for Admin page -->
+    <div class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">Books</a></li>
+            <li><a href="contact.html">Papers</a></li>
+            <li><a href="admin.html">Help</a></li> <!-- Same theme and layout as on login page -->
+        </ul>
+    </div>
+
+    <!-- Buttons in the center -->
+    <div class="buttons-container">
+        <input type="button" value="Add Books" onclick="location.href='addBooks.html'">
+        <input type="button" value="Issue Books" onclick="location.href='issueBooks.html'">
+        <input type="button" value="New Arrivals" onclick="location.href='newArrivals.html'">
+        <input type="button" value="Add Members" onclick="location.href='addMembers.html'">
+    </div>
+
+</body>
+</html>
